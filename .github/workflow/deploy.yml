@@ -1,0 +1,40 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-dart:
+    name: Build and Test Dart
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - name: Check Dart formatting
+        run: cd frontend & dart format --set-exit-if-changed .
+
+      - name: Analyze Dart code
+        run: dart analyze
+
+  build-express:
+    name: Build and Test Express.js
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: cd backend & npm install
+
+      - name: Run tests
+        run: npm test

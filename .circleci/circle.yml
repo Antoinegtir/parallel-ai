@@ -1,0 +1,34 @@
+version: 2.1
+
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:14
+
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Build
+          command: npm run build
+      - deploy:
+          name: Deploy to Firebase Hosting
+          command: |
+            npm install -g firebase-tools
+            cd frontend
+            firebase deploy --token "$FIREBASE_TOKEN"
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
