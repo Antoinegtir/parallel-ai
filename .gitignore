@@ -39,6 +39,7 @@ migrate_working_dir/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
+CHANGELOG.md
 .pub-cache/
 .pub/
 
