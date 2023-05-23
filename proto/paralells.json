@@ -1,0 +1,20 @@
+{
+  "note": {
+    "4wxkFMAaXkghef99UYiNNsfibcg2": {
+      "fcmToken": "",
+      "key": "",
+      "note": "",
+      "creataAt": ""
+    }
+  },
+  "profile": {
+    "4wxkFMAaXkghef99UYiNNsfibcg2": {
+      "fcmToken": "",
+      "key": "",
+      "profilePic": "https://path/to/profilePic/folder/of/firebase/storage/bucket",
+      "name": "",
+      "creataAt": "",
+      "email": ""
+    }
+  }
+}
