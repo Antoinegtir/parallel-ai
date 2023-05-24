@@ -6,6 +6,8 @@ onboarding               |  onboarding               | connection method | signi
 
 Application that allow to note some text quicly and automaticaly clean the text and develop it using api request to GPT 3 model, the server is in express js, deploy on digital ocean container, the front end is develop using flutter framework and is deploy in web version with firebase.
 
+Link: https://parallelsai.com
+
 # Language
 
 ## Front-end
